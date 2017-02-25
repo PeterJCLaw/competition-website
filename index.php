@@ -15,6 +15,8 @@ require('classes/Menu.class.php');
 //get class from extracting metadata and content
 require('classes/Content.class.php');
 
+require('classes/CacheWrapper.class.php');
+
 //get instance of smarty
 $smarty = new Smarty();
 
