@@ -32,14 +32,10 @@
 	<script type="text/javascript" src="{$root_uri}js/competition-resources.js"></script>
 	<script type="text/javascript" src="{$root_uri}js/controllers/{getFromContent get='angular_controller'}.js"></script>
 
-	{include file="tracking.tpl"}
 </head>
 
 <body data-ng-controller="{getFromContent get='angular_controller'}">
-{include file="tracking-image.tpl"}
 <div id="pageWrapper">
-
-	{include file=$header_file}
 
 
 	<div id="{$page_id}" class="content">
@@ -60,8 +56,6 @@
 		Original: <a href="{$root_uri}content/{$original}">{$original}</a>
 	</div>
 
-
-	{include file=$footer_file}
 
 </div>
 
