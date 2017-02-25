@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /~peter/sr/srweb
+RewriteBase /~peter/sr/tmp-comp-website
 
 RewriteCond %{REQUEST_FILENAME}	!-f
 RewriteCond %{REQUEST_URI} 	!^(/community-guidelines(.*))$
