@@ -30,3 +30,6 @@ exclude:
   - Gemfile.lock
   - gems/
   - content/
+  - layouts/
+  - public/
+  - themes/
