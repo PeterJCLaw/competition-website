@@ -1,0 +1,53 @@
+baseURL: https://sourcebots.co.uk
+languageCode: en-gb
+title: SourceBots
+theme: mainroad
+
+params:
+    themeColour: "#4B35B3"
+    subtitle: Exciting robotics challenges for teams of young people
+    description: SourceBots Robotics — exciting robotics challenges for teams of young people
+    readmore: true
+    opengraph: true
+    postSections:
+      - blog
+    widgets:
+        search: false
+        recent_articles: true
+        tags: true
+        social_github: sourcebots
+
+    # competition related variables
+    api_root: http://srcomp.sourcebots.org/comp-api
+    competition_link: /events/2018/competition/
+    youtube_stream_link: https://youtube.com/
+    year: 2018
+
+outputs:
+  home:
+    - "html"
+  section:
+    - "html"
+  comp:
+    - "html"
+
+menu:
+  main:
+    - name: About
+      url: /about/
+    - name: Blog
+      url: /blog/
+    - name: Documentation
+      url: https://docs.sourcebots.co.uk
+    - name: Events
+      url: /events/
+    - name: Sponsors
+      url: /sponsors/
+
+buildFuture: true
+enableRobotsTXT: true
+disableHugoGeneratorInject: true
+
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
