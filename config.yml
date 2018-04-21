@@ -18,7 +18,7 @@ params:
         social_github: sourcebots
 
     # competition related variables
-    api_root: http://srcomp.sourcebots.org/comp-api
+    api_root: https://srcomp.sourcebots.org/comp-api
     competition_link: /events/2018/competition/
     youtube_stream_link: https://youtube.com/
     year: 2018
