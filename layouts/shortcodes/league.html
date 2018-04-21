@@ -1,0 +1,65 @@
+<h1>League Status</h1>
+
+<p>
+This page shows the current status of the league, with teams positioned by
+the number of league points they have earned from their matches.
+Ties are resolved by comparing the total number of game points
+tied teams have earned in their league matches.
+</p>
+
+<p>
+The positions of the teams within the league are used to seed the <a href="/comp/knockout">knockouts</a>.
+</p>
+
+<p>
+Details of the scores for each individual match are available on the <a href="/comp/points">points page</a>.
+</p>
+
+<p data-ng-if="latest_scored_match != null">
+Up to date with scores from match [[ latest_scored_match ]].
+</p>
+<p data-ng-if="latest_scored_match == null">
+No scores have been recorded yet.
+</p>
+
+<table class="sortable" data-ng-init="sortKey = 'league_pos'; alwaysPos = false">
+    <thead>
+        <tr data-ng-class="{reverse:reverse}">
+            <th class="sorter"
+                title="Click to sort by league position."
+                data-ng-class="{active:sortKey == 'league_pos'}"
+                data-ng-click="sortKey = 'league_pos'; reverse = !reverse">
+                Position
+            </th>
+            <th title="The number of league points the team has earned.">
+                League<br />Points
+            </th>
+            <th title="The the total number of game points scored by each team, summed over all of their league matches.">
+                Game<br />Points
+            </th>
+            <th class="sorter"
+                title="Click to sort by team."
+                data-ng-class="{active:sortKey == 'tla'}"
+                data-ng-click="sortKey = 'tla'; reverse = !reverse">
+                Team
+            </th>
+        </tr>
+    </thead>
+    <tr data-ng-repeat="item in (filtered = (teams | orderBy:sortKey:reverse))" id="[[ item.tla ]]">
+        <td>
+            <span data-ng-if="item|isTied:teams">=</span>[[ item.league_pos ]]
+        </td>
+        <td>[[ item.scores.league ]]</td>
+        <td>[[ item.scores.game ]]</td>
+        <td>
+{% if site.teams_url %}
+            <a href="{{ site.teams_url }}/[[ item.tla ]]"
+               title="Find out more about team [[ item.tla ]]"
+            >[[ item.tla ]]</a>:
+{% else %}
+            [[ item.tla ]]:
+{% endif %}
+            [[ item.name ]]
+        </td>
+    </tr>
+</table>
