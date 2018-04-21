@@ -12,6 +12,21 @@
 		</iframe>
 	</div>
 {{ end }}
+{{ if .Site.Params.facebook_stream_link }}
+	<div id="live-stream-wrapper">
+		<iframe
+			src="https://www.facebook.com/plugins/video.php?{{ (querify "href" .Site.Params.facebook_stream_link) | safeURL }}&width=500&show_text=false&height=280&appId"
+			width="700"
+			height="392"
+			style="border:none;overflow:hidden"
+			scrolling="no"
+			frameborder="0"
+			allowTransparency="true"
+			allow="encrypted-media"
+			allowFullScreen="true"
+		></iframe>
+	</div>
+{{ end }}
 <div id="match-info">
 
 <div class="scored match" style="position:relative;margin-top:10px;">

@@ -21,6 +21,7 @@ params:
     api_root: https://srcomp.sourcebots.org/comp-api
     competition_link: /events/2018/competition/
     # youtube_stream_link: https://youtube.com/
+    # facebook_stream_link: https://www.facebook.com/facebook/videos/10153231379946729/
     year: 2018
 
 outputs:
