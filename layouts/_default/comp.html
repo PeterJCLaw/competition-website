@@ -51,20 +51,19 @@
 			</div>
 			{{ partial "menu.html" . }}
 		</header>
-		<div class="wrapper clearfix">
 
-            <div class="comp-nav-wrapper">
-				<div class="fixed-width">
-					<ul class="comp-nav">
-						<li><a href="{{ .Site.Params.competition_link }}">Event Information</a></li>
-						<li><a href="{{ "/comp/team" | relURL }}">Team Information</a></li>
-						<li><a href="{{ "/comp/knockout" | relURL }}">Knockouts</a></li>
-						<li><a href="{{ "/comp/league" | relURL }}">League Status</a></li>
-						<li><a href="{{ "/comp/points" | relURL }}">Match Points</a></li>
-						<li><a href="{{ "/comp/schedule" | relURL }}">Match Schedule</a></li>
-					</ul>
-				</div>
-			</div>
+		<div class="comp-nav-wrapper">
+			<ul class="menu__list comp-nav">
+				<li class="menu__item"><a class="menu__link" href="{{ .Site.Params.competition_link }}">Event Information</a></li>
+				<li class="menu__item"><a class="menu__link" href="{{ "/comp/team" | relURL }}">Team Information</a></li>
+				<li class="menu__item"><a class="menu__link" href="{{ "/comp/knockout" | relURL }}">Knockouts</a></li>
+				<li class="menu__item"><a class="menu__link" href="{{ "/comp/league" | relURL }}">League Status</a></li>
+				<li class="menu__item"><a class="menu__link" href="{{ "/comp/points" | relURL }}">Match Points</a></li>
+				<li class="menu__item"><a class="menu__link" href="{{ "/comp/schedule" | relURL }}">Match Schedule</a></li>
+			</ul>
+		</div>
+
+		<div class="wrapper clearfix">
 			<div id="comp_{{ .File.BaseFileName }}" class="fixed-width">
 				{{ .Content }}
 				<p></p>

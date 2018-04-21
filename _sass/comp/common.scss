@@ -94,8 +94,7 @@ table.sortable {
 
 .comp-nav-wrapper {
 	background: $medium-grey;
-	margin: 0 0 20px;
-	padding: 20px 0;
+	padding: 10px 0;
 }
 
 ul.comp-nav {
@@ -104,6 +103,8 @@ ul.comp-nav {
 
 	a {
 		cursor: pointer;
+		color: $brand-colour;
+		border: none;
 	}
 
 	> li {
