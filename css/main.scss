@@ -3,3 +3,7 @@
 $baseurl: "{{ site.baseurl }}";
 
 @import "_sass/comp/all";
+
+p {
+    margin: 0.5em 0;
+}
