@@ -52,13 +52,13 @@ No scores have been recorded yet.
         <td>[[ item.scores.league ]]</td>
         <td>[[ item.scores.game ]]</td>
         <td>
-{% if site.teams_url %}
-            <a href="{{ site.teams_url }}/[[ item.tla ]]"
+{{ if .Site.Params.teams_url }}
+            <a href="{{ .Site.Params.teams_url }}/[[ item.tla ]]"
                title="Find out more about team [[ item.tla ]]"
             >[[ item.tla ]]</a>:
-{% else %}
+{{ else }}
             [[ item.tla ]]:
-{% endif %}
+{{ end }}
             [[ item.name ]]
         </td>
     </tr>

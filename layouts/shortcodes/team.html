@@ -19,17 +19,17 @@
 This page shows the information for a specific team at the competition.
 </p>
 
-{% if site.teams_url %}
+{{ if .Site.Params.teams_url }}
 <p>
-Find out what the team say about themselves on their <a href="{{ site.teams_url }}/[[ $storage.chosenTeam ]]"></a>status page</a>.
+Find out what the team say about themselves on their <a href="{{ .Site.Params.teams_url }}/[[ $storage.chosenTeam ]]"></a>status page</a>.
 </p>
-{% endif %}
+{{ end }}
 
 <p>
 Teams must present their robot to the staging area in sufficient time
 before the advertised start of a match.
-The staging area is next to the arenas{% if site.venue_layout_link %}, see the
-<a href="{{ site.venue_layout_link }}">venue layout</a>{% endif %}.
+The staging area is next to the arenas{{ if .Site.Params.venue_layout_link }}, see the
+<a href="{{ .Site.Params.venue_layout_link }}">venue layout</a>{{ end }}.
 Teams who arrive late may forfeit the match.
 </p>
 

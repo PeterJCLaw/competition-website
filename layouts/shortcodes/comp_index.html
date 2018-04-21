@@ -2,21 +2,21 @@
 * Add an outline of and link to the rules?
 -->
 
-{% if site.youtube_stream_link %}
+{{ if .Site.Params.youtube_stream_link }}
 	<div id="live-stream-wrapper">
 		<iframe width="760"
 				height="427"
-				src="{{ site.youtube_stream_link }}"
+				src="{{ .Site.Params.youtube_stream_link }}"
 				frameborder="0"
 				allowfullscreen>
 		</iframe>
 	</div>
-{% endif %}
+{{ end }}
 <div id="match-info">
 
 <div class="scored match" style="position:relative;margin-top:10px;">
 	<span style="position:absolute;margin-left:50px;left:0">
-		<a href="{{ site.baseurl }}/comp/points">more scores&hellip;</a>
+		<a href="{{ .Site.BaseURL }}/comp/points">more scores&hellip;</a>
 	</span>
 	<h4>
 		Latest Scores<span data-ng-if="previous_match">: [[ previous_match.display_name ]]</span>
@@ -127,7 +127,7 @@
 	<div  class="more-link-container">
 		<h2>Leaderboard</h2>
 		<span class="more-link">
-			<a href="{{ site.baseurl }}/comp/league">more&hellip;</a>
+			<a href="{{ .Site.BaseURL }}/comp/league">more&hellip;</a>
 		</span>
 	</div>
 	<div id="leaderboard">
@@ -144,11 +144,11 @@
 		<td>[[ team.league_pos ]]</td>
 		<td>[[ team.scores.league ]]</td>
 		<td title="[[ team|teamName ]]">
-{% if site.teams_url %}
-			<a href="{{ site.teams_url }}/[[ team.tla ]]">[[ team.tla ]]</a>
-{% else %}
+{{ if .Site.Params.teams_url }}
+			<a href="{{ .Site.Params.teams_url }}/[[ team.tla ]]">[[ team.tla ]]</a>
+{{ else }}
 			[[ team.tla ]]
-{% endif %}
+{{ end }}
 		</td>
 	</tr>
 </table>
@@ -160,7 +160,7 @@
 	<div class="more-link-container">
 		<h2>Match Schedule</h2>
 		<span class="more-link">
-			<a href="{{ site.baseurl }}/comp/schedule">more&hellip;</a>
+			<a href="{{ .Site.BaseURL }}/comp/schedule">more&hellip;</a>
 		</span>
 	</div>
 
@@ -181,15 +181,15 @@
 			<td data-ng-repeat="team in match.teams track by $index"
 				data-ng-class="{no_match: !team}"
 				title="[[ team|teamInfo:teams|teamName ]]">
-{% if site.teams_url %}
+{{ if .Site.Params.teams_url }}
 				<!--- TODO: non-literal filtering, possibly based on the existence of the page -->
 				<a data-ng-if="team && team != '-'"
-				   href="{{ site.teams_url }}/[[ team ]]"
+				   href="{{ .Site.Params.teams_url }}/[[ team ]]"
 				>[[ team ]]</a>
 				<span data-ng-if="team == '-'">[[ team ]]</span>
-{% else %}
+{{ else }}
 				[[ team ]]
-{% endif %}
+{{ end }}
 			</td>
 		</tr>
 	</tbody>

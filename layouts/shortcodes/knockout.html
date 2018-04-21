@@ -35,18 +35,18 @@ See the <a href="/comp/schedule">match schedule</a> for information about the cu
                 <span style="color: [[ arenas[game.arena].colour ]];">Arena [[ arenas[game.arena].display_name ]]</span>
                 <ul>
                     <li data-ng-repeat="tla in game.teams track by $index">
-{% if site.teams_url %}
-                        <a data-ng-href="{{ site.teams_url }}[[ tla ]]"
+{{ if .Site.Params.teams_url }}
+                        <a data-ng-href="{{ .Site.Params.teams_url }}[[ tla ]]"
                            data-ng-class="{promote: !isFinal && (game.ranking[tla] == 1 || game.ranking[tla] == 2)}"
                            data-ng-show="[[ tla != unknowable && tla != '-' ]]"
                            title="Find out more about team [[ tla|teamInfo:teams|teamName ]]">
                            [[ tla ]]
                        </a>
                         <span data-ng-show="[[ tla == unknowable || tla == '-' ]]">
-{% else %}
+{{ else }}
                         <span title="[[ tla|teamInfo:teams|teamName ]]"
                               data-ng-class="{promote: !isFinal && (game.ranking[tla] == 1 || game.ranking[tla] == 2)}">
-{% endif %}
+{{ end }}
                            [[ tla ]]
                        </span>
                     </li>
