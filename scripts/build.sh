@@ -4,8 +4,8 @@ set -e
 
 rm -rf public/
 
-mkdir -p static/css
+mkdir -p static/comp/css
 
-node_modules/.bin/node-sass css/main.scss static/css/main.css --source-map-embed
+node_modules/.bin/node-sass css/main.scss static/comp/css/main.css --source-map-embed
 
 hugo -v

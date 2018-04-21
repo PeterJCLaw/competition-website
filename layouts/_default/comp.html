@@ -17,25 +17,25 @@
 {{ template "_internal/google_analytics_async.html" . }}
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.min.css" />
-	<link rel="stylesheet" type="text/css" href="{{ "css/main.css" | relURL }}" />
+	<link rel="stylesheet" type="text/css" href="{{ "/comp/css/main.css" | relURL }}" />
 
 	<script type="text/javascript">
 		var API_ROOT = "{{ .Site.Params.api_root }}";
 	</script>
 
-	<script type="text/javascript" src="{{ "/js/polyfill.js" | relURL }}"></script>
-	<script type="text/javascript" src="{{ "/js/competition-utils.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/polyfill.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/competition-utils.js" | relURL }}"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-resource.min.js"></script>
-	<script type="text/javascript" src="{{ "/js/lib/angular-storage/ngStorage.min.js" | relURL }}"></script>
-	<script type="text/javascript" src="{{ "/js/lib/angular-ui-select2/src/select2.js" | relURL }}"></script>
-	<script type="text/javascript" src="{{ "/js/lib/angularjs-ordinal-filter/ordinal.js" | relURL }}"></script>
-	<script type="text/javascript" src="{{ "/js/competition-filters.js" | relURL }}"></script>
-	<script type="text/javascript" src="{{ "/js/competition-resources.js" | relURL }}"></script>
-	<script type="text/javascript" src="{{ "/js/controller-utils.js" | relURL }}"></script>
-	<script type="text/javascript" src="{{ "/js/controllers" | relURL }}/{{ .Params.angular_controller }}.js"></script>
+	<script type="text/javascript" src="{{ "/comp/js/lib/angular-storage/ngStorage.min.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/lib/angular-ui-select2/src/select2.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/lib/angularjs-ordinal-filter/ordinal.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/competition-filters.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/competition-resources.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/controller-utils.js" | relURL }}"></script>
+	<script type="text/javascript" src="{{ "/comp/js/controllers" | relURL }}/{{ .Params.angular_controller }}.js"></script>
 
 </head>
 <body data-ng-controller="{{ .Params.angular_controller }}" class="body {{ if (.Site.Params.leftsidebar) or (.Params.leftsidebar) }}body-left-sidebar{{ else }}body-right-sidebar{{ end }} mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">

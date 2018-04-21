@@ -1,11 +1,11 @@
 [submodule "js/lib/angular-ui-select2"]
-	path = static/js/lib/angular-ui-select2
+	path = static/comp/js/lib/angular-ui-select2
 	url = https://github.com/angular-ui/ui-select2.git
 [submodule "js/lib/angular-storage"]
-	path = static/js/lib/angular-storage
+	path = static/comp/js/lib/angular-storage
 	url = https://github.com/gsklee/ngStorage.git
 [submodule "js/lib/angularjs-ordinal-filter"]
-	path = static/js/lib/angularjs-ordinal-filter
+	path = static/comp/js/lib/angularjs-ordinal-filter
 	url = https://github.com/jdpedrie/angularjs-ordinal-filter.git
 [submodule "_sass/brand"]
 	path = _sass/brand
