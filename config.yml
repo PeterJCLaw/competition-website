@@ -20,7 +20,7 @@ params:
     # competition related variables
     api_root: https://srcomp.sourcebots.org/comp-api
     competition_link: /events/2018/competition/
-    youtube_stream_link: https://youtube.com/
+    # youtube_stream_link: https://youtube.com/
     year: 2018
 
 outputs:
