@@ -1,0 +1,16 @@
+{
+  "name": "competition-website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://git.srobo.org/competition-website.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "browserify": "14.4.0",
+    "node-sass": "4.5.3"
+  }
+}

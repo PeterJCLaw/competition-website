@@ -1,4 +1,6 @@
-@import "../brand/sass/srobo/variables/index";
+$brand-colour:	#4B35B3;
+$light-grey:  rgba(245, 243, 244, 1);
+$medium-grey: rgba(224, 224, 224, 1);
 
 label {
 	display: block;
@@ -25,7 +27,7 @@ table {
 	}
 
 	thead th {
-		border-bottom: 2px solid $sr-blue;
+		border-bottom: 2px solid $brand-colour;
 	}
 
 	tbody tr {
@@ -91,7 +93,7 @@ table.sortable {
 }
 
 .comp-nav-wrapper {
-	background: $sr-medium-grey;
+	background: $medium-grey;
 	margin: 0 0 20px;
 	padding: 20px 0;
 }

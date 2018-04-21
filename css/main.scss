@@ -1,17 +1,5 @@
----
----
 @charset "utf-8";
 
 $baseurl: "{{ site.baseurl }}";
 
-@import
-        "../_sass/brand/sass/srobo/index",
-        "base",
-        "common",
-        "layout",
-        "navigation",
-        "panel",
-        "footer"
-;
-
-@import "comp/all";
+@import "_sass/comp/all";
