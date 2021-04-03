@@ -27,7 +27,7 @@ SRComp-HTTP instance separately.
 
 
 [sourcebots]: https://sourcebots.org
-[srcomp]: https://www.studentrobotics.org/trac/wiki/SRcomp
+[srcomp]: https://github.com/PeterJCLaw/srcomp/wiki
 [install-hugo]: https://gohugo.io/getting-started/installing
 [hugo-0.37]: https://github.com/gohugoio/hugo/releases/tag/v0.37
 [install-node]: https://nodejs.org/en/
