@@ -30,8 +30,14 @@ app.factory("State", function($interval, $resource) {
     }};
 });
 
-app.factory("Arenas", function($resource) {
-    return $resource(API_ROOT + "/arenas");
+app.factory("Arenas", function() {
+    var client = new srcomp.SRComp(API_ROOT);
+    function get(cb) {
+        return client.getArenas().then(function(arenas) {
+            cb({arenas: arenas});
+        })
+    }
+    return { get: get };
 });
 
 app.factory("Corners", function($resource) {

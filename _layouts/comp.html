@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" data-ng-app="app">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
 
 <head>
 	<title>{{ page.title | replace:'$YYYY',site.year }} | {{ site.title }}</title>
@@ -29,6 +29,18 @@
 	<script type="text/javascript" src="{{ site.baseurl }}/js/competition-resources.js"></script>
 	<script type="text/javascript" src="{{ site.baseurl }}/js/controller-utils.js"></script>
 	<script type="text/javascript" src="{{ site.baseurl }}/js/controllers/{{ page.angular_controller }}.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+	<!-- TODO: pull this from a CDN or something-->
+	<script src="{{ site.baseurl }}/js/srcomp/srcomp.js"></script>
+	<script>
+		requirejs(['srcomp'], function(srcomp) {
+			window.srcomp = srcomp;
+			// Set up the AngularJS controller which we deferred until the SRComp
+			// module was loaded.
+			angular.bootstrap(document, ["app"]);
+		});
+	</script>
 </head>
 
 <body data-ng-controller="{{ page.angular_controller }}" class="{{ page.path|replace:'.md',''|replace:'.html',''|replace:'/','_' }}">
