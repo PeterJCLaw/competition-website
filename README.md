@@ -13,9 +13,13 @@ the separate [SRComp suite][srcomp]. These instructions _only_ contain
 information about these pages; it is assumed that the reader will configure an
 SRComp-HTTP instance separately.
 
-1. [Install Hugo][install-hugo]
+1. [Install Hugo][install-hugo] ([`v0.37`][hugo-0.37])
 
-2. Start the development server
+2. [Install NodeJS & NPM][install-node]
+
+3. Install JS dependencies: `npm install`
+
+4. Start the development server
 
     ```shell
     $ ./scripts/server.sh
@@ -25,3 +29,5 @@ SRComp-HTTP instance separately.
 [sourcebots]: https://sourcebots.org
 [srcomp]: https://www.studentrobotics.org/trac/wiki/SRcomp
 [install-hugo]: https://gohugo.io/getting-started/installing
+[hugo-0.37]: https://github.com/gohugoio/hugo/releases/tag/v0.37
+[install-node]: https://nodejs.org/en/
