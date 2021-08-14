@@ -55,7 +55,9 @@
 		<div class="comp-nav-wrapper">
 			<ul class="menu__list comp-nav">
 				<li class="menu__item"><a class="menu__link" href="{{ "/comp" | relURL }}">Overview</a></li>
-				<li class="menu__item"><a class="menu__link" href="{{ .Site.Params.competition_link }}">Event Information</a></li>
+				{{ if .Site.Params.competition_link }}
+					<li class="menu__item"><a class="menu__link" href="{{ .Site.Params.competition_link }}">Event Information</a></li>
+				{{ end }}
 				<li class="menu__item"><a class="menu__link" href="{{ "/comp/team" | relURL }}">Team Information</a></li>
 				<li class="menu__item"><a class="menu__link" href="{{ "/comp/knockout" | relURL }}">Knockouts</a></li>
 				<li class="menu__item"><a class="menu__link" href="{{ "/comp/league" | relURL }}">League Status</a></li>

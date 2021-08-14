@@ -19,7 +19,7 @@ params:
 
     # competition related variables
     api_root: https://srcomp.sourcebots.org/comp-api
-    competition_link: /events/2018/competition/
+    # competition_link: /events/2018/competition/
     # youtube_stream_link: https://youtube.com/
     facebook_stream_link: https://www.facebook.com/SUSUtv/videos/vb.159049780794219/1891818877517292/?type=3&theater
     year: 2018
