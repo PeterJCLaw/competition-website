@@ -6,6 +6,6 @@ rm -rf public/
 
 mkdir -p static/comp/css
 
-node_modules/.bin/node-sass css/main.scss static/comp/css/main.css --source-map-embed
+node_modules/.bin/sass css/main.scss static/comp/css/main.css --embed-source-map
 
 hugo -v
